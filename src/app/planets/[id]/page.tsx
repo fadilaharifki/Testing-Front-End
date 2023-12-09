@@ -1,5 +1,3 @@
-// import { useRouter } from "next/navigation";
-
 import instanceApiAxios from "@/api/services";
 import ModuleDetailPlanet from "@/modules/planets/detailPlanets";
 
