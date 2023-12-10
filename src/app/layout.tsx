@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="flex h-screen flex-col relative">
-        <div className="flex h-screen justify-center">{children}</div>
+        <div className="flex h-screen justify-center text-black">{children}</div>
       </body>
     </html>
   );
