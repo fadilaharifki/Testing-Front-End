@@ -1,5 +1,7 @@
 "use client";
 import { DetailPlanet } from "@/api/model/detailPlanets";
+import Headers from "@/components/Header";
+import Link from "next/link";
 
 interface Props {
   data: DetailPlanet;
@@ -8,12 +10,8 @@ interface Props {
 const ModuleDetailPlanet: React.FC<Props> = ({ data }) => {
   return (
     <div className="flex flex-col w-screen">
-      <div className="flex w-screen items-center mt-4">
-        <div className="flex w-[95%] justify-end">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add To Wishlist</button>
-        </div>
-      </div>
-      <div>ModuleDetailPlanet</div>
+      <Headers name={"Planets"} left={<button className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded">Add To Wishlist</button>} />
+      <div className="flex justify-center w-full mt-16">asdasdd</div>
     </div>
   );
 };

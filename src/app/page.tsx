@@ -1,9 +1,7 @@
 import instanceApiAxios from "@/api/services";
-import { usePlanets } from "@/stores/planets/planetsService";
 import dynamic from "next/dynamic";
-import { useEffect } from "react";
 
-const ModulePlanet = dynamic(() => import("@/modules/planets/page"), {
+const ModuleMain = dynamic(() => import("@/modules/main/page"), {
   ssr: false,
 });
 
@@ -17,7 +15,7 @@ export default async function Home() {
 
   return (
     <>
-      <ModulePlanet firstData={data} />
+      <ModuleMain firstData={data} />
     </>
   );
 }
