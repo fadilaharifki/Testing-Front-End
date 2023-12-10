@@ -4,18 +4,23 @@ import { createJSONStorage, persist } from "zustand/middleware";
 import WishlistActions from "./wishlistActions";
 import { Planet } from "@/api/model/planets";
 
+export type ParamAddWishListh = {
+  item: Planet;
+};
+
 export type StoreWishlist = {
-  data: Planet[];
+  dataWishlist: Planet[];
   loading: boolean;
   error: boolean;
   hasMore: boolean;
   nextPage: number;
-  addWishlist: () => void;
+  addWishlist: ({ item }: ParamAddWishListh) => void;
+  removeWishlist: ({ item }: ParamAddWishListh) => void;
   clear: () => void;
 };
 
 const InitialPlanetsStore = {
-  data: [],
+  dataWishlist: [],
   loading: false,
   error: false,
   nextPage: 2,

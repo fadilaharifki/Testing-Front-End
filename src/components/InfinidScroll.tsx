@@ -20,8 +20,6 @@ const InfiniteScrollComponent: React.FC<InfiniteScrollComponentProps> = ({ data,
       scrollThreshold={1}
     >
       {data.map((item: Planet, index: number) => {
-        // console.log(item);
-
         return (
           <Link
             href={{
