@@ -23,8 +23,6 @@ const InfiniteScrollComponent: React.FC<InfiniteScrollComponentProps> = ({ data,
       scrollThreshold={1}
     >
       {data.map((item: Planet, index: number) => {
-        console.log(item);
-
         return (
           <Link
             href={{
@@ -33,8 +31,8 @@ const InfiniteScrollComponent: React.FC<InfiniteScrollComponentProps> = ({ data,
             key={index}
             className="relative cursor-pointer bg-gradient-to-r transition-transform duration-300 transform hover:scale-105 from-purple-400 to-pink-500 m-2 rounded-xl"
           >
-            <Image style={{ objectFit: "cover", borderRadius: 10 }} width={1000} height={900} src={planetRight} alt="planet image" />
-            <div className="p-2 absolute bottom-0 cursor-pointer w-full flex justify-end">
+            <Image style={{ objectFit: "cover", borderRadius: 10 }} width={1000} height={900} src={index % 2 === 0 ? planetLeft : planetRight} alt="planet image" />
+            <div className={`p-2 absolute bottom-0 cursor-pointer w-full flex ${index % 2 === 0 ? "justify-start" : "justify-end"}`}>
               <p className="text-violet-900 font-semibold text-xl">Planet {item.name}</p>
             </div>
           </Link>
