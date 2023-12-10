@@ -17,7 +17,7 @@ const Headers = dynamic(() => import("@/components/Header"), {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className="flex h-screen flex-col">
+      <body className="flex h-screen flex-col relative">
         <div className="flex h-screen justify-center">{children}</div>
       </body>
     </html>

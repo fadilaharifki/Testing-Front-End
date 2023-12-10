@@ -24,8 +24,8 @@ const Headers: React.FC<HeadersProps> = ({ name, left }) => {
   });
 
   return (
-    <header className={`w-screen fixed transition-transform duration-700 transform ${show} bg-gradient-to-r from-purple-500 from-25% to-pink-500`}>
-      <div className="w-full flex justify-center">
+    <header className={`w-screen z-40 fixed transition-transform duration-700 transform ${show} bg-gradient-to-r from-purple-500 from-25% to-pink-500`}>
+      <div className="w-full flex justify-center ">
         <div className="py-2 flex justify-between items-center w-[93vw]">
           <div className="flex text-center text-2xl font-semibold bg-clip-text text-white">{name.toUpperCase()}</div>
           <div>{left}</div>
