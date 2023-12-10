@@ -23,7 +23,7 @@ const ModuleMain: React.FC<{ firstData: Planet[] }> = ({ firstData }) => {
             href={{
               pathname: `/wishlist`,
             }}
-            className=" cursor-pointer flex text-center text-2xl font-semibold bg-clip-text text-white"
+            className=" cursor-pointer flex text-center text-2xl font-semibold bg-clip-text text-white uppercase"
           >
             Wishlist
           </Link>
