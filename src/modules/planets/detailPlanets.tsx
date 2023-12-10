@@ -83,7 +83,7 @@ const ModuleDetailPlanet: React.FC<Props> = ({ data }) => {
               </button>
             ) : (
               <button onClick={submitRemoveWishList} className="bg-purple-700 hover:bg-purple-800 text-white font-bold py-2 px-4 rounded">
-                Remove From Wishlist
+                Remove
               </button>
             )}
           </>
