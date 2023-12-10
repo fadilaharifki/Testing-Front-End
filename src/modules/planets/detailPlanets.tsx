@@ -4,6 +4,7 @@ import Headers from "@/components/Header";
 import { getDateTimeInfo } from "@/lib/generateDate";
 import { useWishlist } from "@/stores/wishlist/wishlistService";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 
 interface Props {
@@ -11,6 +12,7 @@ interface Props {
 }
 
 const ModuleDetailPlanet: React.FC<Props> = ({ data }) => {
+  const router = useRouter();
   const { addWishlist, dataWishlist, removeWishlist, clear } = useWishlist();
   const [isAdd, setIsAdd] = useState(true);
 
@@ -69,7 +71,10 @@ const ModuleDetailPlanet: React.FC<Props> = ({ data }) => {
   return (
     <div className="flex flex-col w-screen">
       <Headers
-        name={"Planets"}
+        callBack={() => {
+          router.back();
+        }}
+        name={"Detail Planets"}
         left={
           <>
             {isAdd ? (
@@ -84,7 +89,7 @@ const ModuleDetailPlanet: React.FC<Props> = ({ data }) => {
           </>
         }
       />
-      <div className="flex justify-center w-full mt-16">
+      <div className="flex justify-center w-full mt-16 px-2">
         <div className="relative overflow-x-auto">
           <table className="min-w-full text-xs uppercase bg-white border border-gray-300">
             <thead className="text-xs text-gray-700 uppercase bg-gray-50">

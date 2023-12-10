@@ -6,12 +6,18 @@ import { StorePlanet, usePlanets } from "@/stores/planets/planetsService";
 import ModulePlanet from "../planets/page";
 import Headers from "@/components/Header";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const ModuleMain: React.FC<{ firstData: Planet[] }> = ({ firstData }) => {
+  const router = useRouter();
+
   return (
     <div className="flex justify-center w-full">
       <Headers
         name={"Planets"}
+        callBack={() => {
+          router.push("/");
+        }}
         left={
           <Link
             href={{
